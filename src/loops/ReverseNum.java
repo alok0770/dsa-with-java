@@ -1,4 +1,4 @@
-package Loop;
+package loops;
 
 public class ReverseNum {
     public static void main ( String args []){

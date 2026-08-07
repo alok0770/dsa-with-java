@@ -1,8 +1,8 @@
-package Loop;
+package loops;
 
 import java.util.Scanner;
 
-public class LoopsSum {
+public class SumOfNaturalNumbers {
     static void main(String[] args) {
 
         Scanner sc= new Scanner (System.in);

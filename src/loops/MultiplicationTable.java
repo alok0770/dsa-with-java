@@ -1,8 +1,8 @@
-package Loop;
+package loops;
 
 import java.util.Scanner;
 
-public class Table {
+public class MultiplicationTable {
     public static void main (String args [])
     {
 //        //Printing the table of 19...
