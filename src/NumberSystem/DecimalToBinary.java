@@ -4,33 +4,43 @@ import java.util.Scanner;
 
 public class DecimalToBinary {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        // Taking User Input
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter A Decimal Number : ");
-
-        // store the number entered by user
-        int num = sc.nextInt();
-
-        // save a copy, since num will change in the loop
-        int originalNum = num;
-
-        // will store the final binary result
+        int num = 0;
         String binary = "";
 
-        // keep looping until num becomes 0
+        // keep asking until user enters a non-zero number
+        while (num == 0) {
+
+            System.out.println();
+            System.out.print("Enter A Decimal Number : ");
+            num = input.nextInt();
+            System.out.println();
+
+            // show error only if input was invalid (0)
+            if (num == 0) {
+                System.out.println("[Error] Please Enter A valid Number ");
+                System.out.println();
+            }
+        }
+
+        // save a copy, since num will change in the loop below
+        int originalNum = num;
+
+        // convert decimal to binary using divide-by-2 method
         while (num > 0) {
 
-            int remainders = num % 2;
-
-            // add new bit to the front of the string
-            binary = remainders + binary;
-
-            // remove the last bit, move to next digit
-            num = num / 2;
-
+            int remainder = num % 2;              // get the last bit (0 or 1)
+            binary = remainder + binary;           // add new bit to the front of the string
+            num = num / 2;                          // remove the last bit, move to next digit
         }
-        // Printing the binary Number
-        System.out.println("Binary Of " + originalNum + " : " + binary);
+
+        // display the final result
+        System.out.println("Your Decimal " + originalNum + " Converted in binary  : ");
+        System.out.println("------------------");
+        System.out.println(binary);
+        System.out.println("------------------");
+
+        input.close();
     }
 }
