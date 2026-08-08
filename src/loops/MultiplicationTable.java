@@ -13,7 +13,7 @@ public class MultiplicationTable {
         // Print the table of n Here n is a integer which user will input
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter A number ");
+        System.out.print("Enter A number ");
         int num = sc.nextInt();
 
         for ( int i= 1; i<=10; i++){
