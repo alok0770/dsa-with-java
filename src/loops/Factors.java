@@ -4,22 +4,28 @@ import java.util.Scanner;
 
 public class Factors {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println(" Enter A value ");
-        int num = sc.nextInt();
+        int num;
+        int count = 0;   // counts total factors, starts at 0
 
+        System.out.print("Enter a number : ");
+        num = input.nextInt();
 
-        int highestFactor = 1;
-        for (int i = num-1; i >1; i--) {
+        System.out.println("-------------------------");
+
+        // check every number from 1 to num, print if it's a factor and count it
+        for (int i = 1; i <= num; i++) {
             if (num % i == 0) {
-                highestFactor = i ;
-                break;
+                System.out.println(i);
+                count++;
             }
         }
-        System.out.println(highestFactor);
+
+        System.out.println("-------------------------");
+        System.out.println("Total factors : " + count);
+        System.out.println("-------------------------");
+
+        input.close();
     }
 }
-
-
-
