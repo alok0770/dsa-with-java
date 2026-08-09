@@ -36,7 +36,10 @@ public class DiscountCalculator {
                 double finalPrice = amount - discount;
 
                 System.out.println("You Get " + discountPercent + "% Discount");
+                System.out.println();
+                System.out.println("-----------------------");
                 System.out.println("You Paid Only " + finalPrice);
+                System.out.println("-----------------------");
             }
             input.close();
     }
