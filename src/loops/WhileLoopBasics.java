@@ -8,7 +8,7 @@ public class WhileLoopBasics {
         // print even numbers from 2 to 10 using while loop
         while (number <= 10) {
             System.out.println(number);
-            number += 2;
+            number = number + 2;
         }
     }
 }
