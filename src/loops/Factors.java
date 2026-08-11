@@ -34,7 +34,7 @@ public class Factors {
             System.out.println("Total factors : " + count);
             System.out.println("-------------------------");
         }
-        
+
         input.close();
     }
 }
