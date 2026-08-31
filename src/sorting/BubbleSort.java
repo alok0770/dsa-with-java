@@ -17,8 +17,10 @@ public class BubbleSort {
         // Perform Bubble Sort
         for (int i = 0; i < num.length - 1; i++) {
 
+            boolean isSwapped = false;
+
             // Compare adjacent elements
-            for (int j = 0; j < num.length - 1; j++) {
+            for (int j = 0; j < num.length - 1 - i; j++) {
 
                 // Swap if the current element is greater
                 // than the next element
@@ -27,7 +29,14 @@ public class BubbleSort {
                     int temp = num[j];
                     num[j] = num[j + 1];
                     num[j + 1] = temp;
+
+                    isSwapped = true;
                 }
+            }
+
+            // If no swapping occurred, array is already sorted
+            if (!isSwapped) {
+                break;
             }
         }
 
