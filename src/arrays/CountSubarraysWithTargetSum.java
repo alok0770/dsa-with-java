@@ -18,7 +18,7 @@ public class CountSubarraysWithTargetSum {
             // Generate subarrays starting from index i
             for (int j = i; j < numbers.length; j++) {
 
-                sum += numbers[j];
+                sum = sum + numbers[j];
 
                 // Check if the current subarray sum equals the target
                 if (sum == target) {

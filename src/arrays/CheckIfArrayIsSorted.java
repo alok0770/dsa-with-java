@@ -4,13 +4,13 @@ public class CheckIfArrayIsSorted {
 
     public static void main(String[] args) {
 
-        int[] numbers = {10, 20, 3, 40, 50};
+        int[] numbers = {10, 20, 30, 40, 50};
 
         // Assume the array is sorted initially
         boolean isSorted = true;
 
         // Compare each element with the next element
-        for (int i = 0; i < numbers.length - 1; i++) {
+        for (int i = 0; i < numbers.length - 1 ; i++) {
 
             // If the current element is greater than the next element,
             // the array is not sorted
