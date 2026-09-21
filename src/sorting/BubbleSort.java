@@ -15,15 +15,14 @@ public class BubbleSort {
         System.out.println("Before Sorting : " + Arrays.toString(num));
 
         // Perform Bubble Sort
-        for (int i = 0; i < num.length - 1; i++) {
+        for (int i = 0; i < num.length; i++) {
 
             boolean isSwapped = false;
 
             // Compare adjacent elements
             for (int j = 0; j < num.length - 1 - i; j++) {
 
-                // Swap if the current element is greater
-                // than the next element
+
                 if (num[j] > num[j + 1]) {
 
                     int temp = num[j];
@@ -34,14 +33,16 @@ public class BubbleSort {
                 }
             }
 
+
             // If no swapping occurred, array is already sorted
             if (!isSwapped) {
                 break;
             }
         }
 
-        // Display array after sorting
-        System.out.println("After Sorting  : " + Arrays.toString(num));
-        System.out.println("==============================");
+            // Display array after sorting
+            System.out.println("After Sorting  : " + Arrays.toString(num));
+            System.out.println("==============================");
+        }
     }
-}
+

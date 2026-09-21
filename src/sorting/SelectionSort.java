@@ -22,22 +22,24 @@ public class SelectionSort {
     public static void selectionSort(int[] num) {
 
         int n = num.length;
-        for (int i = 0; i < n - 1; i++) {
+
+        for (int i = 0; i < n-1 ; i++) {
             int minIndex = i;
 
-            // Find minimum element
-            for (int j = i + 1; j < n; j++) {
-                if (num[j] < num[minIndex]) {
+            for (int j = i+1; j < n ; j++) {
+
+                if(num[j] < num[minIndex])
                     minIndex = j;
-                }
             }
 
-            // Swap
-            if (minIndex != i) {
+            // swap
+
+            if(minIndex != i) {
                 int temp = num[i];
                 num[i] = num[minIndex];
                 num[minIndex] = temp;
             }
+
         }
     }
 }
