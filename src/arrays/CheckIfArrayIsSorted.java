@@ -4,33 +4,29 @@ public class CheckIfArrayIsSorted {
 
     public static void main(String[] args) {
 
-        int[] numbers = {10, 20, 30, 40, 50};
+        int[] nums = {4,1,2,6,10,5,9};
+        checkSorted(nums);
 
-        // Assume the array is sorted initially
+    }
+
+    public static void checkSorted(int[] nums) {
+
+        int n = nums.length;
         boolean isSorted = true;
 
-        // Compare each element with the next element
-        for (int i = 0; i < numbers.length - 1 ; i++) {
+        for (int i = 0; i < n-1 ; i++) {
 
-            // If the current element is greater than the next element,
-            // the array is not sorted
-            if (numbers[i] > numbers[i + 1]) {
+            if(nums[i] > nums[i+1]){
                 isSorted = false;
                 break;
             }
         }
 
-        // Display the result
-        System.out.println("================================");
-        System.out.println("       ARRAY SORT CHECK");
-        System.out.println("================================");
 
-        if (!isSorted) {
-            System.out.println("Result : Array is NOT sorted.");
-        } else {
-            System.out.println("Result : Array is sorted.");
+        if(isSorted){
+            System.out.println("Array is sorted !! ");
+        }else{
+            System.out.println("Array is not sorted !!");
         }
-
-        System.out.println("================================");
     }
 }
